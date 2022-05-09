@@ -16,11 +16,11 @@ int main()
     Market* market = new Market(maxPrice, maxBayers, queueLen, averageNumberOfItems,
         goodsService, buyerIntensity, numberOfCashDesks);
     market->run();
-    std::cout << market->getStatistics().numberOfFailed << std::endl;
-    std::cout << market->getStatistics().numberOfProcessed << std::endl;
-    std::cout << market->getStatistics().numberOfRequests << std::endl;
-    std::cout << market->getAverageQueueLength() << std::endl;
-    std::cout << market->getAverageTimeOfWaiting() << std::endl;
-    std::cout << market->getAverageCheckoutTime() << std::endl;
-    std::cout << market->getAverageRestTime() << std::endl;
+    std::cout << "Number of failures " << market->getStatistics().numberOfFailed << std::endl;
+    std::cout << "Number of processed " << market->getStatistics().numberOfProcessed << std::endl;
+    std::cout << "Number of requests " << market->getStatistics().numberOfRequests << std::endl;
+    std::cout << "average queue length " << market->getAverageQueueLength() << std::endl;
+    std::cout << "average time of waiting " << market->getAverageTimeOfWaiting() << std::endl;
+    std::cout << "average checkout time " << market->getAverageCheckoutTime() << std::endl;
+    std::cout << "average rest time " << market->getAverageRestTime() << std::endl;
 }
